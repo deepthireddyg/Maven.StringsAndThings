@@ -60,8 +60,32 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+
+        int is = 0;
+        int not = 0;
+
+        for(int i =0; i<input.length() ; i++) {
+            if (i < input.length() - 2) {
+                String tmp = input.substring(i, i + 3);
+                if (tmp.equals("not"))
+                    not++;
+            }
+            if (i < input.length() - 1) {
+                String temp = input.substring(i, i + 2);
+                if (temp.equals("is"))
+                    is++;
+
+            }
+        }
+
+          if(not == is)
+              return true;
+          else
+              return false;
     }
+
+
+
 
     /**
      * We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
