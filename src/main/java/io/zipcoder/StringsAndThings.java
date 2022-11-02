@@ -15,7 +15,19 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+         int l = input.length();
+         int ctr = 0;
+         input = input.toLowerCase();
+         for(int i =0; i<l ; i++){
+             if(input.charAt(i) == 'z'|| input.charAt(i) == 'y')
+             {
+                 if(i < l-1 && !Character.isLetter(input.charAt(i+1)))
+                     ctr++;
+                 else if(i == l-1)
+                     ctr++;
+             }
+         }
+         return ctr;
     }
 
     /**
