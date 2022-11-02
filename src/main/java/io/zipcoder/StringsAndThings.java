@@ -40,7 +40,15 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
-        return null;
+         // String result = "";
+        //  for(int i = 0;i<base.length()-remove.length();i++){
+
+
+        //  }
+
+
+        return base.replaceAll(""+ remove,"");
+
     }
 
     /**
