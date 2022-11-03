@@ -94,9 +94,16 @@ public class StringsAndThings {
      *           gHappy("xxgxx") // Should return  false
      *           gHappy("xxggyygxx") // Should return  false
      */
-    public Boolean gIsHappy(String input){
-        return null;
+    public Boolean gIsHappy(String input) {
+
+        int i = input.indexOf("g");
+        char j = input.charAt(i+1);
+          if(j == 'g')git add 
+              return true;
+          else
+              return false;
     }
+
 
 
     /**
